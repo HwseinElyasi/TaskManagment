@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Task Application</string>
+    <string name="todo">todo</string>
+    <string name="project">پروژه ها</string>
+    <string name="done_task">کارهای انجام شده</string>
+    <string name="no_done_task">کارهای انجام نشده</string>
+    <string name="title_task">عنوان وظیفه :</string>
+    <string name="enter_task">وظیفه خود را وارد کنید :</string>
+    <string name="hosein_developer">صفحه اینستاگرام: hosein.developer@</string>
+    <string name="hwsein_dev">آیدی تلگرام : hwsein_dev@</string>
+    <string name="search">Search</string>
+</resources>
