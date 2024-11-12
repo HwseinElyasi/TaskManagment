@@ -21,16 +21,6 @@ class ViewMainActivity(
 
     val binding = ActivityMainBinding.inflate(LayoutInflater.from(contextInstance))
 
-    fun clickCloseIconAndSearchInRecycler() {
-
-        binding.imgClose.setOnClickListener {
-
-            binding.bottomNav.binding.root.visibility = View.VISIBLE
-
-        }
-
-    }
-
 
     fun setStartInAppFragment(fragment: Fragment) {
 
@@ -43,13 +33,6 @@ class ViewMainActivity(
             binding.bottomNav.visibility = View.VISIBLE
 
         }, 6000)
-
-        handler.postDelayed({
-
-            binding.edtSearch.visibility = View.VISIBLE
-            binding.imgClose.visibility = View.VISIBLE
-
-        }, 7000)
 
         utils.setFragment(fragment)
 

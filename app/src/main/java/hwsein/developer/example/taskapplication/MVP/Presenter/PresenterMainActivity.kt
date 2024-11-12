@@ -12,7 +12,6 @@ class PresenterMainActivity(
 
         setSplash()
         setItemInBottomNav()
-        clickIconInEdtSearch()
 
     }
 
@@ -25,12 +24,6 @@ class PresenterMainActivity(
     private fun setItemInBottomNav(){
 
         view.clickInBottomNavItem(model.activeItemInBottomNav())
-
-    }
-
-    private fun clickIconInEdtSearch(){
-
-        view.clickCloseIconAndSearchInRecycler()
 
     }
 

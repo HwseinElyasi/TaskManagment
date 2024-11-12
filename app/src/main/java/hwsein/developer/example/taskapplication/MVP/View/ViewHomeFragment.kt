@@ -31,7 +31,6 @@ class ViewHomeFragment(
     val view = DialogBoxBinding.inflate(LayoutInflater.from(contextInstance))
 
 
-
     fun initRecycler(data: ArrayList<TaskEntity>, utils: Utils) {
 
         binding.recyclerView.layoutManager = LinearLayoutManager(
