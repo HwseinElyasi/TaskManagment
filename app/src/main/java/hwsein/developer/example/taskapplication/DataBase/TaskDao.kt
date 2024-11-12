@@ -20,6 +20,10 @@ interface TaskDao {
     fun getTaskByState(type : Boolean) : Flow<List<TaskEntity>>
 
 
+    @Query("SELECT * FROM ${DBHandler.TABLE_NAME} WHERE state IS NULL")
+    fun getTaskWithNullState() : Flow<List<TaskEntity>>
+
+
     @Update
     fun updateTask(vararg task : TaskEntity) : Int
 

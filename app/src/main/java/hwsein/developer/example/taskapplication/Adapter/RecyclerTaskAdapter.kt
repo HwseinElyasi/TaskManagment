@@ -49,11 +49,11 @@ class RecyclerTaskAdapter(
 
             binding.textDate.text = data.date
             binding.textTitle.text = data.title
-            binding.checkBox.isChecked = data.state
+            binding.checkBox.isChecked = data.state == true
 
             binding.checkBox.setOnClickListener {
 
-                if (data.state) {
+                if (data.state == true) {
 
                     utils.updateTask(TaskEntity(data.id, data.date, data.title, false))
 

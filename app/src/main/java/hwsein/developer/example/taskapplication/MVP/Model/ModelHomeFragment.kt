@@ -10,11 +10,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class ModelHomeFragment(
-    private val utils: Utils,
     private val context: Context?
 ) {
 
-    val db = DBHandler.getData(context!!)
+    private val db = DBHandler.getData(context!!)
 
     fun getDate() : String{
 
@@ -70,6 +69,27 @@ class ModelHomeFragment(
                   utils.getTask(it)
 
               }
+
+            }
+
+        }
+
+
+    }
+
+    fun getNullStateTaskInDataBase(utils: Utils){
+
+        CoroutineScope(Dispatchers.IO).launch {
+
+            val data = db.taskDao().getTaskWithNullState()
+
+            launch(Dispatchers.Main) {
+
+                data.collect{
+
+                    utils.getNullStateTask(it)
+
+                }
 
             }
 

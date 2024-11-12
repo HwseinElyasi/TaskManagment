@@ -24,7 +24,6 @@ class ViewHomeFragment(
     private val contextInstance: Context?,
 )  {
 
-
     val binding = HomeFragmentBinding.inflate(LayoutInflater.from(contextInstance))
 
     private var dialog = Dialog(contextInstance!!)

@@ -17,32 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edt_search"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/back_edt_dialog"
-        android:drawableStart="@drawable/ic_search"
-        android:hint="@string/search"
-        android:inputType="text"
-        android:visibility="gone"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/img_close"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/todo"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/edt_search"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/edt_search"
-        app:layout_constraintTop_toTopOf="@+id/edt_search"
-        app:srcCompat="@drawable/_849810_cross_multimedia_error_delite_icon" />
 
     <hwsein.developer.example.taskapplication.CustomView.CustomBottomNav
         android:id="@+id/bottomNav"

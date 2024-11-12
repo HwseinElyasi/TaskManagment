@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <View
         android:id="@+id/view"
@@ -17,55 +17,43 @@
     <View
         android:id="@+id/view_home"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view_task"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/view_task" />
+        app:layout_constraintStart_toEndOf="@+id/view_about"
+        app:layout_constraintTop_toTopOf="@+id/view" />
 
     <View
         android:id="@+id/view_task"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view_home"
-        app:layout_constraintEnd_toStartOf="@+id/view_home"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/view_search"
-        app:layout_constraintTop_toTopOf="@+id/view_home" />
-
-    <View
-        android:id="@+id/view_search"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view_task"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/view_about"
-        app:layout_constraintTop_toTopOf="@+id/view_task" />
+        app:layout_constraintStart_toEndOf="@+id/view_home"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
 
     <View
         android:id="@+id/view_about"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view_search"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/view_home"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
 
     <ImageView
         android:id="@+id/image_home"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="@+id/view_home"
         app:layout_constraintEnd_toEndOf="@+id/view_home"
-        app:layout_constraintHorizontal_bias="0.588"
-        android:contentDescription="@string/todo"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="@+id/view_home"
         app:layout_constraintTop_toTopOf="@+id/view_home"
         app:srcCompat="@drawable/home_color" />
@@ -75,22 +63,11 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/view_task"
         app:layout_constraintEnd_toEndOf="@+id/view_task"
         app:layout_constraintStart_toStartOf="@+id/view_task"
         app:layout_constraintTop_toTopOf="@+id/view_task"
         app:srcCompat="@drawable/document_no_color" />
-
-    <ImageView
-        android:id="@+id/image_search"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="@+id/view_search"
-        app:layout_constraintEnd_toEndOf="@+id/view_search"
-        app:layout_constraintStart_toStartOf="@+id/view_search"
-        app:layout_constraintTop_toTopOf="@+id/view_search"
-        app:srcCompat="@drawable/ic_search" />
 
     <ImageView
         android:id="@+id/image_about"
@@ -107,9 +84,9 @@
         android:id="@+id/view6"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:background="@drawable/top_nav_back"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/top_nav_back"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

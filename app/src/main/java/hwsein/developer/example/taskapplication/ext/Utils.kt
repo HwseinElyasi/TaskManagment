@@ -5,21 +5,19 @@ import hwsein.developer.example.taskapplication.DataBase.TaskEntity
 
 interface Utils {
 
-    fun setFragment(fragment : Fragment){}
+    fun setFragment(fragment: Fragment) {}
 
-    fun insertTask(data : TaskEntity) {}
+    fun insertTask(data: TaskEntity) {}
 
-    fun updateTask(task : TaskEntity){}
+    fun updateTask(task: TaskEntity) {}
 
-    fun updateTask2(task : TaskEntity){}
+    fun getNullStateTask(task: List<TaskEntity>) {}
 
-    fun requestData(state : Boolean){}
+    fun requestData(state: Boolean) {}
 
-    fun deleteTask(task:TaskEntity){}
+    fun deleteTask(task: TaskEntity) {}
 
-    fun getTask(tasks : List<TaskEntity>){}
-
-    fun onSearchQueryChanged(query : String){}
+    fun getTask(tasks: List<TaskEntity>) {}
 
 
 }

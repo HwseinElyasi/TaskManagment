@@ -22,7 +22,6 @@ class CustomBottomNav(
 
     }
 
-    fun getVIew() = binding.viewSearch
 
     fun onClickHandler(activeItem: ActiveItem){
 
@@ -47,12 +46,6 @@ class CustomBottomNav(
 
         }
 
-        binding.viewSearch.setOnClickListener {
-
-            activeItem.activeView(SetView.SEARCH)
-            binding.root.visibility = INVISIBLE
-
-        }
 
 
         }
@@ -62,7 +55,6 @@ class CustomBottomNav(
             binding.imageHome.setImageResource(R.drawable.home_color)
             binding.imageAbout.setImageResource(R.drawable.about_no_color)
             binding.imageDocument.setImageResource(R.drawable.document_no_color)
-            binding.imageSearch.setImageResource(R.drawable.ic_search)
 
         }
 
@@ -71,7 +63,6 @@ class CustomBottomNav(
             binding.imageDocument.setImageResource(R.drawable.document_color)
             binding.imageAbout.setImageResource(R.drawable.about_no_color)
             binding.imageHome.setImageResource(R.drawable.home_no_color)
-            binding.imageSearch.setImageResource(R.drawable.ic_search)
 
         }
 
@@ -80,7 +71,6 @@ class CustomBottomNav(
             binding.imageAbout.setImageResource(R.drawable.about_color)
             binding.imageHome.setImageResource(R.drawable.home_no_color)
             binding.imageDocument.setImageResource(R.drawable.document_no_color)
-            binding.imageSearch.setImageResource(R.drawable.ic_search)
 
         }
 

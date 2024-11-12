@@ -6,13 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import hwsein.developer.example.taskapplication.MVP.Model.ModelHomeFragment
-import hwsein.developer.example.taskapplication.MVP.Presenter.PresenterHomeFragment
-import hwsein.developer.example.taskapplication.MVP.View.ViewHomeFragment
-import hwsein.developer.example.taskapplication.ext.Utils
+import hwsein.developer.example.taskapplication.MVP.Presenter.PresenterDutiesFragment
+import hwsein.developer.example.taskapplication.MVP.View.ViewDutiesFragment
 
-class HomeFragment : Fragment() , Utils  {
-
-    private lateinit var presenter : PresenterHomeFragment
+class DutiesFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -20,13 +17,13 @@ class HomeFragment : Fragment() , Utils  {
         savedInstanceState: Bundle?
     ): View {
 
-         val view = ViewHomeFragment(context)
-        presenter = PresenterHomeFragment(view , ModelHomeFragment(context))
+        val view = ViewDutiesFragment(context)
+
+        val presenter = PresenterDutiesFragment(view , ModelHomeFragment(context))
         presenter.onCreate()
 
         return view.binding.root
     }
-
 
 
 }
